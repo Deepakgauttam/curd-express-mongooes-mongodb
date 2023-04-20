@@ -15,6 +15,8 @@ cd ..
 Database => collection =>
 db => Modules (schecma)
 
+API data
+http://localhost:3000/mens
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~ POST Request using express, mongoose ~~~~~~~~~~~~~~~~~~~~~~~~~~ 
