@@ -50,11 +50,10 @@ Output
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~ Get Request using express, mongoose ~~~~~~~~~~~~~~~~~~~~~~~~~~ 
 Postman
-Step 1 collection -> Make Post request
-Step 2 Body -> Raw -> Json
+Step 1 collection -> Make GET request
 
 Input
-Get request    http://localhost:3000/mens
+GET request    http://localhost:3000/mens
 
 
 Output
@@ -100,3 +99,27 @@ Output
         "__v": 0
     }
 ]
+
+
+
+~~~~~~~~~~~~~~ GET request for individual using express, mongoose ~~~~~~~~~~~~ 
+Postman
+Step 1 collection -> Make Post request
+
+GET request for individual
+http://localhost:3000/mens/64415502fe337359b83ea89e
+
+input
+64415502fe337359b83ea89e
+
+output
+{
+    "_id": "64415502fe337359b83ea89e",
+    "ranking": 1,
+    "name": "Deepak",
+    "dob": "1994-09-04T18:30:00.000Z",
+    "country": "IND",
+    "score": 1477,
+    "event": "100m",
+    "__v": 0
+}

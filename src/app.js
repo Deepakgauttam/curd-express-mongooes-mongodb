@@ -36,6 +36,20 @@ app.get("/mens", async(req,res)=>{
       res.status(400).send(e);
     }
 })
+//Get Request
+//we will handle get req of individual
+app.get("/mens/:id", async(req,res)=>{
+    try{
+      //we will get data in feature
+      const _id = req.params.id;
+      const getMen = await MensRanking.findById({_id})
+      // const getMens = await MensRanking.findById({_id:_id})
+      res.send(getMen);
+    }
+    catch(e){
+      res.status(400).send(e);
+    }
+})
 
 app.listen(port, () => {
   console.log(`connection is live at port no. ${port}`);
