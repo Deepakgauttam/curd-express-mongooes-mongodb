@@ -1,7 +1,7 @@
 const express = require("express");
 require("../src/db/conn");
 
-const MensRanking=require("../src/modules/mens.js");
+const MensRanking=require("../src/modules/mens.js"); 
 
 const app = express();
 app.use(express.json());
