@@ -50,6 +50,22 @@ app.get("/mens/:id", async(req,res)=>{
       res.status(400).send(e);
     }
 })
+//Get Request
+//we will handle patch req of individual update
+app.patch("/mens/:id", async(req,res)=>{
+    try{
+      //we will get data in feature
+      const _id = req.params.id;
+      const updateMen = await MensRanking.findByIdAndUpdate(_id,req.body,{
+        new:true   // to update in postman 
+      })
+      // const getMens = await MensRanking.findById({_id:_id})
+      res.send(updateMen);
+    }
+    catch(e){
+      res.status(500).send(e);     // server error
+    }
+})
 
 app.listen(port, () => {
   console.log(`connection is live at port no. ${port}`);

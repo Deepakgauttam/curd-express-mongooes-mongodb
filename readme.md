@@ -104,7 +104,7 @@ Output
 
 ~~~~~~~~~~~~~~ GET request for individual using express, mongoose ~~~~~~~~~~~~ 
 Postman
-Step 1 collection -> Make Post request
+Step 1 collection -> Make GET request for individual
 
 GET request for individual
 http://localhost:3000/mens/64415502fe337359b83ea89e
@@ -119,6 +119,28 @@ output
     "name": "Deepak",
     "dob": "1994-09-04T18:30:00.000Z",
     "country": "IND",
+    "score": 1477,
+    "event": "100m",
+    "__v": 0
+}
+
+
+~~~~~~~~~~ Patch Request for individual update using express, mongoose ~~~~~~~~~~~~~~~~
+Postman
+Step 1 collection -> Make Patch request
+Step 2 Body -> Raw -> Json
+Input
+{
+    "country":"UK"
+}
+
+Output
+{
+    "_id": "64415502fe337359b83ea89e",
+    "ranking": 1,
+    "name": "Deepak",
+    "dob": "1994-09-04T18:30:00.000Z",
+    "country": "UK",
     "score": 1477,
     "event": "100m",
     "__v": 0
