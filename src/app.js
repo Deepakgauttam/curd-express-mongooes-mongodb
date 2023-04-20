@@ -66,6 +66,33 @@ app.patch("/mens/:id", async(req,res)=>{
       res.status(500).send(e);     // server error
     }
 })
+// Delete Request
+// we will handle delete req of individual 
+app.delete("/mens/:id", async(req,res)=>{
+    try{
+      //we will get data in feature
+      const deleteMen = await MensRanking.findByIdAndDelete(req.params.id)
+      res.send(deleteMen);
+    }
+    catch(e){
+      res.status(500).send(e);     // server error
+    }
+})
+
+// app.delete("/mens/:id", async(req,res)=>{
+//   try{
+//     const _id = req.params.id;
+//     const deleteMen = await MensRanking.findByIdAndDelete(_id);
+//     if(!deleteMen) {
+//       return res.status(404).send('No record found.');
+//     }
+//     res.status(200).send(deleteMen);
+//   }
+//   catch(e){
+//     res.status(500).send(e);     // server error
+//   }
+// })
+
 
 app.listen(port, () => {
   console.log(`connection is live at port no. ${port}`);
