@@ -11,6 +11,7 @@ app.get("/", async (req, res) => {
   res.send("Hello my name is deepak");
 });
 
+//post Request
 //create database + express.json()
 app.post("/mens", async(req,res)=>{
     try{
