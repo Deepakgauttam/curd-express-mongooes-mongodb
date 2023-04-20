@@ -24,6 +24,18 @@ app.post("/mens", async(req,res)=>{
       res.status(400).send(e);
     }
 })
+//Get Request
+//Read database + express.json()
+app.get("/mens", async(req,res)=>{
+    try{
+      //we will get data in feature
+      const getMens = await MensRanking.find({})
+      res.send(getMens);
+    }
+    catch(e){
+      res.status(400).send(e);
+    }
+})
 
 app.listen(port, () => {
   console.log(`connection is live at port no. ${port}`);
