@@ -1,7 +1,7 @@
 const express = require("express");
 require("../src/db/conn");
 
-const MensRanking=require("../src/modules/mens"); 
+// const MensRanking=require("../src/modules/mens"); 
 const router=require("./routers/men.js"); 
 
 const app = express();
