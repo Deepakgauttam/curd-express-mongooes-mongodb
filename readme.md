@@ -1,3 +1,6 @@
+Start
+npm run dev
+
 
 to create folder 
 mkdir  folderName
